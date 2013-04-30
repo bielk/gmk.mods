@@ -1,0 +1,17 @@
+[
+{
+  "modid": "CompressedCobblestone",
+  "name": "CompressedCobblestone",
+  "description": "A simple mod that allows you to compress the cobblestone",
+  "version": "o.5",
+  "mcversion": "1.5.1",
+  "url": "http://goo.gl/ePKRU",
+  "updateUrl": "",
+  "credits": "Bielk809",
+  "authors": ["Bielk809"],
+  "logoFile": "/gmk.png",
+  "screenshots": [""],
+  "parent":"",
+  "dependencies": ["Bielk809"]
+}
+]
