@@ -11,8 +11,10 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.Mod.PostInit;
 import cpw.mods.fml.common.Mod.PreInit;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -36,6 +38,9 @@ public class CompressedCobblestoneMod
 	public static Block compCobble3x;
 	public static Block compCobble4x;
 	public static Block compCobble5x;
+	
+	   @Instance("CompressedCobblestone")
+       public static CompressedCobblestoneMod instance;
 
        @PreInit
        public void load(FMLPreInitializationEvent event)
@@ -47,7 +52,7 @@ public class CompressedCobblestoneMod
        public void load(FMLInitializationEvent event)
        {
               //Compressed Cobblestone:
-              compCobble = new BlockCompressedCobblestone(1500, Material.rock).setUnlocalizedName("compCobble").setCreativeTab(CreativeTabs.tabBlock).setResistance(15.0F).setHardness(2.0F).setStepSound(Block.soundStoneFootstep);
+              compCobble = new BlockCompressedCobblestone(3800, Material.rock).setUnlocalizedName("compCobble").setCreativeTab(CreativeTabs.tabBlock).setResistance(15.0F).setHardness(2.0F).setStepSound(Block.soundStoneFootstep);
               LanguageRegistry.addName(compCobble, "Compressed Cobblestone");
               GameRegistry.registerBlock(compCobble);
               GameRegistry.addRecipe(new ItemStack(compCobble, 1), new Object [] {"##", "##", '#', Block.cobblestone});
@@ -57,28 +62,28 @@ public class CompressedCobblestoneMod
           	  GameRegistry.addSmelting(compCobble.blockID, new ItemStack(Block.stone, 4), 2.0F);
               
           	  //Compressed Cobblestone 2x:
-              compCobble2x = new BlockCompressedCobblestone2x(1501, Material.rock).setUnlocalizedName("compCobble2x").setCreativeTab(CreativeTabs.tabBlock).setResistance(20.0F).setHardness(2.0F).setStepSound(Block.soundStoneFootstep);
+              compCobble2x = new BlockCompressedCobblestone2x(3801, Material.rock).setUnlocalizedName("compCobble2x").setCreativeTab(CreativeTabs.tabBlock).setResistance(20.0F).setHardness(2.0F).setStepSound(Block.soundStoneFootstep);
               LanguageRegistry.addName(compCobble2x, "Compressed Cobblestone 2x");
               GameRegistry.registerBlock(compCobble2x);
               GameRegistry.addRecipe(new ItemStack(compCobble2x, 1), new Object [] {"##", "##", '#', compCobble});
               GameRegistry.addRecipe(new ItemStack(Block.cobblestone, 16), new Object [] {"#", '#', compCobble2x});
               
               //Compressed Cobblestone 3x:
-              compCobble3x = new BlockCompressedCobblestone3x(1502, Material.rock).setUnlocalizedName("compCobble3x").setCreativeTab(CreativeTabs.tabBlock).setResistance(25.0F).setHardness(2.0F).setStepSound(Block.soundStoneFootstep);
+              compCobble3x = new BlockCompressedCobblestone3x(3802, Material.rock).setUnlocalizedName("compCobble3x").setCreativeTab(CreativeTabs.tabBlock).setResistance(25.0F).setHardness(2.0F).setStepSound(Block.soundStoneFootstep);
               LanguageRegistry.addName(compCobble3x, "Compressed Cobblestone 3x");
               GameRegistry.registerBlock(compCobble3x);
               GameRegistry.addRecipe(new ItemStack(compCobble3x, 1), new Object [] {"##", "##", '#', compCobble2x});
               GameRegistry.addRecipe(new ItemStack(Block.cobblestone, 64), new Object [] {"#", '#', compCobble3x});
               
               //Compressed Cobblestone 4x:
-              compCobble4x = new BlockCompressedCobblestone4x(1503, Material.rock).setUnlocalizedName("compCobble4x").setCreativeTab(CreativeTabs.tabBlock).setResistance(35.0F).setHardness(2.0F).setStepSound(Block.soundStoneFootstep);
+              compCobble4x = new BlockCompressedCobblestone4x(3803, Material.rock).setUnlocalizedName("compCobble4x").setCreativeTab(CreativeTabs.tabBlock).setResistance(35.0F).setHardness(2.0F).setStepSound(Block.soundStoneFootstep);
               LanguageRegistry.addName(compCobble4x, "Compressed Cobblestone 4x");
               GameRegistry.registerBlock(compCobble4x);
               GameRegistry.addRecipe(new ItemStack(compCobble4x, 1), new Object [] {"##", "##", '#', compCobble3x});
               GameRegistry.addRecipe(new ItemStack(Block.cobblestone, 256), new Object [] {"#", '#', compCobble4x});
               
               //Compressed Cobblestone 5x:
-              compCobble5x = new BlockCompressedCobblestone5x(1504, Material.rock).setUnlocalizedName("compCobble5x").setCreativeTab(CreativeTabs.tabBlock).setResistance(40.0F).setHardness(2.0F).setStepSound(Block.soundStoneFootstep);
+              compCobble5x = new BlockCompressedCobblestone5x(3804, Material.rock).setUnlocalizedName("compCobble5x").setCreativeTab(CreativeTabs.tabBlock).setResistance(40.0F).setHardness(2.0F).setStepSound(Block.soundStoneFootstep);
               LanguageRegistry.addName(compCobble5x, "Compressed Cobblestone 5x");
               GameRegistry.registerBlock(compCobble5x);
               GameRegistry.addRecipe(new ItemStack(compCobble5x, 1), new Object [] {"##", "##", '#', compCobble4x});
