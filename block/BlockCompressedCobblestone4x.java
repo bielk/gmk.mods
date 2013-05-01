@@ -1,4 +1,4 @@
-package gmk.mods.blocks;
+package gmk.mods.block;
 
 //Mod made in Brazil
 //Mod made by Bielk809
